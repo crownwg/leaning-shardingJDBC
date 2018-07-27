@@ -15,6 +15,7 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
+
     <!-- 引入配置文件 -->
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="ignoreResourceNotFound" value="false" />
@@ -25,8 +26,8 @@
             </list>
         </property>
     </bean>
-    <import resource="classpath*:/spring/beans/spring-mvc.xml"/>
-    <import resource="classpath*:/spring/beans/spring-datasource.xml"/>
-    <import resource="classpath*:/spring/beans/application-dao.xml"/>
-
+    <import resource="classpath*:spring/beans/spring-mvc.xml"/>
+    <import resource="classpath*:spring/beans/application-dao.xml"/>
+    <import resource="classpath*:spring/beans/spring-datasource.xml"/>
+    <!--<import resource="classpath*:spring/beans/sharding-jdbc.xml"/>-->
 </beans>

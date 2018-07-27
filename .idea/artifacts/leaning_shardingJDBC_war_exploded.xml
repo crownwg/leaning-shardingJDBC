@@ -31,6 +31,18 @@
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.10.0" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.10.0" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-web:2.9.1" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-core:1.4.2" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.12" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
+          <element id="library" level="project" name="Maven: cglib:cglib:3.1" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:4.2" />
+          <element id="library" level="project" name="Maven: io.dropwizard.metrics:metrics-core:3.1.0" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-spring:1.4.0" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-common:1.4.0" />
+          <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy:indy:2.4.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.1.1.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

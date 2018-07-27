@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class UserController {
 
-    //@Autowired
+    @Autowired
     private IUserService userService;
 
     @RequestMapping("/login")
