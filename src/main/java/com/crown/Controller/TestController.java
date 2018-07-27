@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class TestController {
 
-    @RequestMapping("/index")
+    @RequestMapping("/hello")
     public String helloWord(){
         System.out.print("访问index后台。。。");
         return "hello";
