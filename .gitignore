@@ -2,5 +2,5 @@
 .idea
 **/*.iml
 target/*
-
+leaning-shardingJDBC/target
 

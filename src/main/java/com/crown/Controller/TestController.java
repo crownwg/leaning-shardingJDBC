@@ -13,6 +13,6 @@ public class TestController {
     @RequestMapping("/index")
     public String helloWord(){
         System.out.print("访问index后台。。。");
-        return "index";
+        return "hello";
     }
 }
