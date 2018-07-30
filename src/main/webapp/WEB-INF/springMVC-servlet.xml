@@ -12,9 +12,9 @@
     </context:component-scan>
     <!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
     <mvc:annotation-driven/>
-
     <!-- 配置静态资源的路径，比如js，和图片，不用被spring mvc进行解析处理 -->
     <mvc:default-servlet-handler />
+    
 
     <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
     <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

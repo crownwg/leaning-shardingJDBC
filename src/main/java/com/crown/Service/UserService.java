@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 @Service("userService")
 public class UserService implements IUserService {
 
-    @Autowired
+    @Autowired(required = false)
     private UserDao userDao;
 
     public User findByUserAndPass(String username, String password) {
 
+        System.out.println(userDao == null);
         return userDao.findByUserAndPass(username,password);
     }
 }

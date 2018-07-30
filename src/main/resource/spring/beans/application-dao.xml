@@ -5,7 +5,7 @@
        default-autowire="byName" default-lazy-init="true">
 
     <bean id="baseMapper" class="org.mybatis.spring.mapper.MapperFactoryBean" abstract="true" lazy-init="true">
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <property name="sqlSessionFactory" ref="learnSessionFactory"/>
     </bean>
 
     <bean id="userDao" parent="baseMapper">

@@ -28,6 +28,6 @@
     </bean>
     <import resource="classpath*:spring/beans/spring-datasource.xml"/>
     <import resource="classpath*:spring/beans/application-dao.xml"/>
-    <import resource="classpath*:spring/beans/spring-mvc.xml"/>
-    <!--<import resource="classpath*:spring/beans/sharding-jdbc.xml"/>-->
+    <import resource="classpath*:WEB-INF/springMVC-servlet.xml"/>
+    <import resource="classpath*:spring/beans/sharding-jdbc.xml"/>
 </beans>
