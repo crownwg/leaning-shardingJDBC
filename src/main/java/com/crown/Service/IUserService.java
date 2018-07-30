@@ -4,5 +4,5 @@ import com.crown.entity.User;
 
 public interface IUserService {
 
-    User findByUserAndPass(String username, String password);
+    User findByUserAndPass(String username, int password);
 }

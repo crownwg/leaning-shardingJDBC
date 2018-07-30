@@ -11,9 +11,8 @@ public class UserService implements IUserService {
     @Autowired(required = false)
     private UserDao userDao;
 
-    public User findByUserAndPass(String username, String password) {
+    public User findByUserAndPass(String username, int password) {
 
-        System.out.println(userDao == null);
         return userDao.findByUserAndPass(username,password);
     }
 }

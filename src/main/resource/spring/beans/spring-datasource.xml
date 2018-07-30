@@ -18,27 +18,31 @@
         <property name="maxIdle" value="${september.dc.maxIdle}" />
         <property name="maxWait" value="${september.dc.maxWait}" />
     </bean>
-    <rdb:strategy id="tableShardingStrategy" sharding-columns="user_id" algorithm-class="com.crown.algorithm.MemberSingleKeyTableShardingAlgorithm"/>
+    <!--<rdb:strategy id="tableShardingStrategy" sharding-columns="user_id" algorithm-class="com.crown.algorithm.MemberSingleKeyTableShardingAlgorithm"/>-->
 
-    <rdb:data-source id="shardingDataSource">
-        <rdb:sharding-rule data-sources="dataSource">
-            <rdb:table-rules>
-                <rdb:table-rule logic-table="member_index" actual-tables="member_index_tbl_${[0,1,2,3,4,5,6,7,8,9]}${0..9}"  table-strategy="tableShardingStrategy"/>
-                <rdb:table-rule logic-table="member_details" actual-tables="member_details_tbl_${[0,1,2,3,4,5,6,7,8,9]}${0..9}"  table-strategy="tableShardingStrategy"/>
-            </rdb:table-rules>
-        </rdb:sharding-rule>
-    </rdb:data-source>
+    <!--<rdb:data-source id="shardingDataSource">-->
+        <!--<rdb:sharding-rule data-sources="dataSource">-->
+            <!--<rdb:table-rules>-->
+                <!--<rdb:table-rule logic-table="member_index" actual-tables="member_index_tbl_${[0,1,2,3,4,5,6,7,8,9]}${0..9}"  table-strategy="tableShardingStrategy"/>-->
+                <!--<rdb:table-rule logic-table="member_details" actual-tables="member_details_tbl_${[0,1,2,3,4,5,6,7,8,9]}${0..9}"  table-strategy="tableShardingStrategy"/>-->
+            <!--</rdb:table-rules>-->
+        <!--</rdb:sharding-rule>-->
+    <!--</rdb:data-source>-->
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="shardingDataSource" />
+        <property name="dataSource" ref="dataSource" />
     </bean>
 
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
     <bean id="learnSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <!--<property name="configLocation" value="classpath*:/spring/beans/mybatis-config.xml"/>-->
-        <property name="dataSource" ref="shardingDataSource" />
+        <property name="configLocation" value="classpath:spring/beans/mybatis-config.xml"/>
+        <property name="dataSource" ref="dataSource" />
         <!-- 自动扫描mapping.xml文件 -->
-        <property name="mapperLocations" value="classpath*:mybatis/*.xml"></property>
+        <property name="mapperLocations">
+            <list>
+                <value>classpath*:mybatis/*.xml</value>
+            </list>
+        </property>
     </bean>
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->

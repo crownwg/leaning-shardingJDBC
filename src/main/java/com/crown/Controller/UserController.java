@@ -17,9 +17,9 @@ public class UserController {
     @RequestMapping("/login")
     public String login(HttpServletRequest request){
         String userName=request.getParameter("username");
-        String password=request.getParameter("password");
-        User user= userService.findByUserAndPass(userName,password);
+        String  password=request.getParameter("password");
+        User user= userService.findByUserAndPass(userName,Integer.valueOf(password));
         System.out.print(user!=null?"用户id:"+user.getId():"用户不存在");
-        return user!=null?"index":"error";
+        return user!=null?"hello":"error";
     }
 }

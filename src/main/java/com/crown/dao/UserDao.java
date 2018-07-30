@@ -9,5 +9,5 @@ public interface UserDao {
 
     User findByUserAndPass(
             @Param("username") String username,
-            @Param("password")String password);
+            @Param("password")int password);
 }
